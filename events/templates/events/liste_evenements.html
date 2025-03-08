@@ -1,0 +1,6 @@
+{% for event in events %}
+    <h2>{{ event.nom }}</h2>
+    <p>Date: {{ event.date }}</p>
+    <p>Places max: {{ event.max_participants }}</p>
+    <a href="{% url 'inscription_form' event.id %}" class="btn btn-success">S'inscrire</a>
+{% endfor %}

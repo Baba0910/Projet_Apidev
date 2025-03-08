@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Statistiques des participants par tranche d'âge</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tranche d'âge</th>
+            <th>Nombre d'inscrits</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tranche, count in stats.items %}
+        <tr>
+            <td>{{ tranche }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
