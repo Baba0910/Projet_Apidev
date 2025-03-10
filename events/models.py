@@ -3,7 +3,7 @@ from django.db import models
 class Event(models.Model):
     nom = models.CharField(max_length=255)
     date = models.DateTimeField()
-    max_participants = models.IntegerField()
+    max_participants = models.IntegerField(default=50)
 
     def __str__(self):
         return f"{self.nom} - {self.date.strftime('%d/%m/%Y')}"
